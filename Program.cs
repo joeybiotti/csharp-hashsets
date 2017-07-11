@@ -31,6 +31,12 @@ namespace sets
             HashSet<string> BoughtJunkers = new HashSet<string>(Showroom);
             Showroom.UnionWith(Junkyard);
             Console.WriteLine($"Total cars after buying junkyard: {Showroom.Count}");
+
+            Junkyard.Remove("Dodge Ram");
+            Showroom.Add("Dodge Ram");
+            Console.WriteLine($"Now there are this many cars in the junkyard: {Junkyard.Count}");
+            Console.WriteLine($"And now there are this many cars in the showroom: {Showroom.Count}");  
+
         }
             
     }
